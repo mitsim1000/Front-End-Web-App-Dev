@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  padding: 10px;
+  background-color: gray;
+  border: 1px solid black;
+  height: 100px;
+  overflow: hidden;
+}
+
+section:hover {
+  overflow-y: auto;
+  cursor: ns-resize;
+}
+
+h3 {
+  margin: 0;
+}
+
+h1.title {
+  text-align: center;
+  font-size: 60px;
+}
+
+.food-option {
+  float: left;
+  padding: 10px;
+}
+
+.food-titles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+
+.mobile-title{
+  display: none;
+}
+
+h1.mobile-title {
+  font-family: cursive;   
+  font-size: 45px;                 
+  text-align: left;
+  margin: 10px;;            
+}
+
+.chicken {
+  background-color: gold;
+}
+
+.beef {
+  background-color: red;
+}
+
+.sushi {
+  background-color: pink;
+}
+
+@media(min-width: 992px) {
+  .col-lg-4 {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+  .col-md-6 {
+    float: left;
+    width: 50%;
+  }
+  .col-md-12 {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media(max-width: 767px) {
+  .col-sm-12 {
+    float: left;
+    width: 100%;
+  }
+  .title{
+    display: none;
+  }
+  .mobile-title{
+    display: inline
+  }
+  .food-titles{
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  section {
+    padding: 0;
+  }
+}
+
+
