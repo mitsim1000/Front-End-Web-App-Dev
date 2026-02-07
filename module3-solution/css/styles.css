@@ -1,0 +1,12 @@
+.menu-item {
+  background: darkgray;
+  margin: 5px;
+  padding: 5px;
+  height: 1000px;
+}
+
+@media (max-width: 767px) {
+  #mobile-menu {
+    background: darkgray;
+  }
+}
