@@ -1,0 +1,41 @@
+<div class="container">
+  <h2 class="text-center">My Info</h2>
+
+  <div ng-if="!myInfoCtrl.userInfo" class="text-center">
+    <p>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></p>
+  </div>
+
+  <div ng-if="myInfoCtrl.userInfo">
+    <table class="table">
+      <tr>
+        <td><strong>First Name:</strong></td>
+        <td>{{ myInfoCtrl.userInfo.firstName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Last Name:</strong></td>
+        <td>{{ myInfoCtrl.userInfo.lastName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td>{{ myInfoCtrl.userInfo.email }}</td>
+      </tr>
+      <tr>
+        <td><strong>Phone:</strong></td>
+        <td>{{ myInfoCtrl.userInfo.phone }}</td>
+      </tr>
+    </table>
+
+    <h3>Favorite Menu Item</h3>
+    <div class="row">
+      <div class="col-sm-5">
+        <img class="img-responsive" width="250" height="150"
+             ng-src="images/menu/{{myInfoCtrl.userInfo.favoriteItem.categoryShortName}}/{{myInfoCtrl.userInfo.favoriteItem.short_name}}.jpg"
+             alt="Item">
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfoCtrl.userInfo.favoriteItem.name}}</h3>
+        <p class="menu-item-details">{{myInfoCtrl.userInfo.favoriteItem.description}}</p>
+    </div>
+    </div>
+  </div>
+</div>
